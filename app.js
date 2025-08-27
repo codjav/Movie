@@ -21,11 +21,10 @@ function showSlider(type){
     let thumbnailItemDom = thumbnailBorderDom.querySelectorAll('.item');
 
     if (type === 'next') {
-        sliderDom.appendChild(sliderItemDom[0]);            // move first slide to end
-        thumbnailBorderDom.appendChild(thumbnailItemDom[0]); // move first thumbnail to end
+        sliderDom.appendChild(sliderItemDom[0]);            
+        thumbnailBorderDom.appendChild(thumbnailItemDom[0]); 
         carouselDom.classList.add('next');
 
-        // remove the class after animation so it can trigger again
         setTimeout(() => {
             carouselDom.classList.remove('next');
         }, 1400);
